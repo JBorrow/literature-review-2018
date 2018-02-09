@@ -1,5 +1,6 @@
-\documentclass[a4paper, twocols]{article}
+\documentclass[a4paper]{article}
 \usepackage[margin=2cm]{geometry}
+\usepackage{multicol}
 
 \usepackage{amsmath}
 \usepackage{graphicx}
@@ -8,21 +9,29 @@
 \newcommand{\fii}{FIRE-II}
 
 \author{Josh Borrow}
-\title{Comparing the \hagn and \fii simulations}
+\title{Comparing the \hagn{} and \fii{} simulations}
 
 \begin{document}
 \maketitle
 
 \section{Introduction}
+\begin{multicols}{2}
 \input{intro.tex}
+\end{multicols}
 
 \section{Models}
+\begin{multicols}{2}
 \input{models.tex}
+\end{multicols}
 
 \section{Black Hole Treatment}
+\begin{multicols}{2}
 \input{bhs.tex}
+\end{multicols}
 
 \section{Discussion}
+\begin{multicols}{2}
 \input{discussion.tex}
+\end{multicols}
 
 \end{document}
