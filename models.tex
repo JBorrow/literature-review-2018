@@ -1,0 +1,14 @@
+\begin{table}
+  \centering
+  \begin{tabularx}{\textwidth}{cXX}
+    Model & \hagn & \fire \\
+    \hline
+    Star Formation & Schmidt Law: $\dot{\rho}_* = \epsilon_* \rho / t_{ff}$ at high densities ($\rho_0 > 250$ $n_H$ cm$^{-3}$). Resolution dependent. & Contains resolved molecular clouds. SF is activated when gas is self-gravitating, self-shielded, and has a density $\rho_0 > 1000$ $n_H$ cm$^{-3}$. SF in these regions follows a Schmidt Law: $\dot{\rho}_* = \rho_{mol} / t_{ff}$ where $\rho_{mol}$ is the density of molecular gas. \\
+    Stellar Feedback & Gas pressure is enhanced to follow $T = T_0 (\rho/\rho_0$ in the cells surrounding the SF event. & Stellar populations (SP) are individually evolved (\textsc{Starburst99}) and use local radiative transfer based on the SP properties. Winds are also found directly from the SP. \\
+    Supernovae & Supernovae energy of $e_{SN} = 10^{50}$ erg M$_{\odot}^{-1}$ is injected to neighboring cells using the Sedov-Taylor exact solution including mass, momentum and energy. & A voronoi-like mesh is constructed around the star particle, and energy, momentum, and mass are deposited in a weighted manner on the faces using the exact Sedov-Taylor solution \citep[see][]{hopkins_how_2017}.\\
+    Black Hole Growth & Uses a \citet{bondi__1957} solution such that $\dot{M}_{BH} \propto M_{BH}^2 \rho/(c^2 + u&2)^{3/2}$, and includes terms for black hole spin to cap accretion at the \citet{eddington__xxxx} limit. & Uses the \citet{hopkins_x_2011} `Torque' formalism such that $\dot{M}_{BH} \propto f_d^{3/2} M_d R_0^{-3/2} M_{BH}^{1/6}$. The \citet{eddington__xxxx} limit can be exceeded by 10 times in this model. \\
+    Black Hole Dynamics & A drag force is added to emulate dynamical friction. & The black hole is given a dynamical mass of $M_{dyn} = 60M_{BH}$ initially. This limit is removed once $M_{BH} = M_{dyn}$.
+    AGN Feedback & Two modes: radio ($\dot{M}_{BH}/\dot{M}_{edd} < 0.01$) where jets are ejected at $v = 10^{4}$ km s$^{-1}$, and quasar, where energy is deposited isotropically to neighboring cells such that $\dot{E}_{AGN} \propto \dot{M}_{BH}$ is calibrated to reproduce the $M_{BH}$-$M_b$ and $M_{BH}$-$\sigma_b$ relations. & None. \\
+    Cooling & H, He and metals along with a UV background after reionization at $z=10$ is included in a \citet{sutherland_cooling_1993} model between $10^4$ and $10^{8.5}$ K. & A \citet{hopkins_x_2014} model is used with 11 species, self-shielding, and optically thick compoents between $10$ and $10^{10}$ K. \\
+  \end{tabularx}
+\end{table}
