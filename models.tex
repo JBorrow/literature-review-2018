@@ -1,3 +1,44 @@
+A quick comparison of relevant models used in \citet{dubois_black_2015}
+(the \hagn{} paper, henceforth referred to as D15) and
+\citet{angles-alcazar_black_2017} (the relevant \fire paper, henceforth
+referred to as A17) is presented in Table \ref{tab:comparison}. It is important
+to note that in the main \fire{} paper \citep{hopkins_fire-2_2017} and 
+calculations there is no black hole physics implemented, and only in A17 are
+the effects of black holes considered.
+
+As well as the sub-grid physics models implemented in both of the simulation
+suites, there are some major differences in the numerics between the two
+projects. Below these differences are considered individually.
+
+\subsection{Hydrodynamics}
+
+\hagn{} and \fire{} choose fundamentally different paradigms for their
+hydrodynamical calculations. \fire{} uses the `GIZMO' code in MFM mode
+(a meshless finite mass method, see \citet{hopkins_gizmo_2015}), whereas
+\hagn{} uses the `RAMSES' code, using an AMR (adaptive mesh refinment, see
+\citet{romain_cosmological_2001}) technique. The major difference between
+these two methods is that the MFM code uses \emph{particles} to represent
+the fluids in the simulations, and the AMR code uses \emph{cells} defined
+on a grid structure.
+
+The major benefit to using a particle-based simulation code is that it is
+automatically adaptive; regions that have a higher density have a higher
+resolution simply by the nature of there being more particles there. An AMR
+code, on the other hand, requires a refinment algorithm which refines the mesh
+typically when a cell breaches some density threshold. Historically, AMR codes
+have been prized for their more accurate (typically second-order)
+hydrodynamical calculations, but the GIZMO code can take advantage of a
+meshless structure (as opposed to the usual smoothed particle hydrodynamics
+used for particle-based simulations, see e.g.
+\citet{springel_cosmological_2005}) to solve equations to an equally high order
+when paired with an appropriate Riemann solver \citep{hopkins_gizmo_2015,
+hopkins_new_2017}.
+
+Along with the underlying methods used to calculate hydrodynamical
+acclerations, there is also the question of resolution. ?????????????
+
+\subsection{Gravity}
+
 % We want our table to span across multiple columns!
 \end{multicols}
 
@@ -17,5 +58,12 @@
     AGN Feedback & Two modes: radio ($\dot{M}_{BH}/\dot{M}_{edd} < 0.01$) where jets are ejected at $v = 10^{4}$ km s$^{-1}$, and quasar, where energy is deposited isotropically to neighboring cells such that $\dot{E}_{AGN} \propto \dot{M}_{BH}$ is calibrated to reproduce the $M_{BH}$-$M_b$ and $M_{BH}$-$\sigma_b$ relations. & None. \\
     Cooling & H, He and metals along with a UV background after reionization at $z=10$ is included in a \citet{sutherland_cooling_1993} model between $10^4$ and $10^{8.5}$ K. & A \citet{hopkins_x_2014} model is used with 11 species, self-shielding, and optically thick compoents between $10$ and $10^{10}$ K. 
   \end{tabularx}
+  \caption{A comparison of the various models used within both the \hagn{} and
+    \fire{} simulation projects. Note that the black hole phyiscs considered in
+    this table is \emph{only} presented in \citet{angles-alcazar_black_2017},
+    and not in the main \fire{} paper \citep{hopkins_fire-2_2017} as the
+    original set of \fire{} runs contains \emph{no black hole physics
+    whatsoever}.}
+  \label{tab:comparison}
 \end{table}
 \begin{multicols}{2}
