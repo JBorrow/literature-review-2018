@@ -1,11 +1,17 @@
 Cosmological simulations play an important role in current astronomical
 research; they are used to develop mock catalogues for surveys, test theories
-such as modified gravity, and allow for predictions to be made about the
-nature of the Universe. Simulations usually vary three main components:
-the hydrodynamical scheme used to calculate forces between gas particles,
-the gravitational scheme used to calculate the long-range force of gravity,
-and (most importantly) the sub-grid model used to implement star formation,
-stellar feedback, along with many other kinds of `microphysics'.
+such as modified gravity, and allow for predictions to be made about the nature
+of the Universe \citep{smith_lightcone_2017, arnold_zoomed_2016,
+schaye_eagle_2015}. Historically, only dark matter was simulated in an `N-body'
+fashion; the effects of baryons were added later \citep{lemson_halo_2006,
+lacey_unified_2016}. As computing power has increased over time, the focus has
+changed to a full hydrodynamical description of the Unvierse. Simulations
+usually vary three main components: the hydrodynamical scheme used to calculate
+forces between gas particles, the gravitational scheme used to calculate the
+long-range force of gravity, and (most importantly) the sub-grid model used to
+implement star formation, stellar feedback, along with many other kinds of
+`microphysics' \citep[see e.g.][]{vogelsberger_introducing_2014,
+schaye_eagle_2015, pillepich_simulating_2018}.
 
 Whilst the community has converged to two main hydrodynamical schemes and one
 gravity-calculation algorithm, there still remains major differences in
@@ -19,8 +25,10 @@ the galaxy mass function, the cosmic star formation history, among many
 other key properties.
 
 In this report, two different simulations that use different hydrodynamical
-schemes and vastly different sub-grid models are compared. In §\ref{sec:models}
-their basic components are compared; in §\ref{sec:bhs} their treatments
-of black holes are compared; and in §\ref{sec:discussion} an overall comparison
-of the two simulations is given. 
+schemes and vastly different sub-grid models are compared; the \hagn{}
+simulations \citep{dubois_dancing_2014}, and the \fire{} simulations
+\citep{hopkins_fire-2_2017}, with a particular focus on their implementations
+of black-hole physics. In §\ref{sec:models} their basic components are
+compared; in §\ref{sec:bhs} their treatments of black holes are compared; and
+in §\ref{sec:discussion} an overall comparison of the two simulations is given. 
 
