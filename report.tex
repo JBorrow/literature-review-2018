@@ -1,12 +1,14 @@
 \documentclass[a4paper]{article}
-\usepackage[margin=2cm]{geometry}
+\usepackage[margin=4cm]{geometry}
 \usepackage{multicol}
 
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{tabularx}
 
-\usepackage{natbib}
+\usepackage{url}
+\usepackage[round]{natbib}
+\bibliographystyle{unsrtnat}
 
 \newcommand{\hagn}{Horizon-AGN}
 \newcommand{\fire}{FIRE-II}
@@ -18,23 +20,17 @@
 \maketitle
 
 \section{Introduction}\label{sec:intro}
-\begin{multicols}{2}
 \input{intro.tex}
-\end{multicols}
 
 \section{Models}\label{sec:models}
-\begin{multicols}{2}
 \input{models.tex}
-\end{multicols}
 
 \section{Black Hole Treatment}\label{sec:bhs}
-\begin{multicols}{2}
 \input{bhs.tex}
-\end{multicols}
 
 \section{Discussion}\label{sec:discussion}
-\begin{multicols}{2}
 \input{discussion.tex}
-\end{multicols}
+
+\bibliography{library.bib}
 
 \end{document}
