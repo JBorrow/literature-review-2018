@@ -4,7 +4,7 @@ mkdir compiled
 
 xelatex -output-directory="compiled" report.tex
 
-bibtex compiled/text
+bibtex compiled/report
 
 xelatex -output-directory="compiled" report.tex
 xelatex -output-directory="compiled" report.tex
