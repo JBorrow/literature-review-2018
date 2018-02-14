@@ -1,69 +1,91 @@
-A quick comparison of relevant models used in \citet{dubois_black_2015}
-(the \hagn{} paper, henceforth referred to as D15) and
-\citet{angles-alcazar_black_2017} (the relevant \fire paper, henceforth
-referred to as A17) is presented in Table \ref{tab:comparison}. It is important
-to note that in the main \fire{} paper \citep{hopkins_fire-2_2017} and 
-calculations there is no black hole physics implemented, and only in A17 are
-the effects of black holes considered.
-
-As well as the sub-grid physics models implemented in both of the simulation
-suites, there are some major differences in the numerics between the two
-projects. Below these differences are considered individually.
-
-\subsection{Hydrodynamics}
-
-\hagn{} and \fire{} choose fundamentally different paradigms for their
-hydrodynamical calculations. \fire{} uses the `GIZMO' code in MFM mode
-(a meshless finite mass method, see \citet{hopkins_gizmo_2015}), whereas
-\hagn{} uses the `RAMSES' code, using an AMR (adaptive mesh refinment, see
-\citet{romain_cosmological_2001}) technique. The major difference between
-these two methods is that the MFM code uses \emph{particles} to represent
-the fluids in the simulations, and the AMR code uses \emph{cells} defined
-on a grid structure.
-
-The major benefit to using a particle-based simulation code is that it is
-automatically adaptive; regions that have a higher density have a higher
-resolution simply by the nature of there being more particles there. An AMR
-code, on the other hand, requires a refinment algorithm which refines the mesh
-typically when a cell breaches some density threshold. Historically, AMR codes
-have been prized for their more accurate (typically second-order)
-hydrodynamical calculations, but the GIZMO code can take advantage of a
-meshless structure (as opposed to the usual smoothed particle hydrodynamics
-used for particle-based simulations, see e.g.
-\citet{springel_cosmological_2005}) to solve equations to an equally high order
-when paired with an appropriate Riemann solver \citep{hopkins_gizmo_2015,
-hopkins_new_2017}.
-
-Along with the underlying methods used to calculate hydrodynamical
-acclerations, there is also the question of resolution. ?????????????
-
-\subsection{Gravity}
-
-% We want our table to span across multiple columns!
-\end{multicols}
-
 % Change the distance between the lines to make it more readable
 \renewcommand{\arraystretch}{2}
 
-\begin{table}
+\newgeometry{margin=2cm}
+\begin{table*}
   \centering
     \begin{tabularx}{\textwidth}{cXX}
     Model & \hagn & \fire \\
     \hline
-    Star Formation & Schmidt Law: $\dot{\rho}_* = \epsilon_* \rho / t_{ff}$ at high densities ($\rho_0 > 250$ $n_H$ cm$^{-3}$). Resolution dependent. & Contains resolved molecular clouds. SF is activated when gas is self-gravitating, self-shielded, and has a density $\rho_0 > 1000$ $n_H$ cm$^{-3}$. SF in these regions follows a Schmidt Law: $\dot{\rho}_* = \rho_{mol} / t_{ff}$ where $\rho_{mol}$ is the density of molecular gas. \\
-    Stellar Feedback & Gas pressure is enhanced to follow $T = T_0 (\rho/\rho_0$ in the cells surrounding the SF event. & Stellar populations (SP) are individually evolved (\textsc{Starburst99}) and use local radiative transfer based on the SP properties. Winds are also found directly from the SP. \\
+        Star Formation & Schmidt Law: $\dot{\rho}_* = \epsilon_* \rho / t_{\rm ff}$ at high densities ($\rho_0 > 250$ $n_H$ cm$^{-3}$), where $\dot{\rho}_*$ is the local star formation rate, $\epsilon_*$ is an efficiency factor, $\rho$ is the local gas density, and $t_{\rm ff}$ is the free-fall time. Resolution dependent. & Contains resolved molecular clouds. Star formation (SF) is activated when gas is self-gravitating, self-shielded, and has a density $\rho_0 > 1000$ $n_H$ cm$^{-3}$. SF in these regions follows a Schmidt Law: $\dot{\rho}_* = \rho_{mol} / t_{\rm ff}$ where $\rho_{mol}$ is the density of molecular gas. \\
+        Stellar Feedback & Gas pressure is enhanced to follow $T = T_0 (\rho/\rho_0)$ in the cells surrounding the SF event. & Stellar populations (SP) are individually evolved (using \textsc{Starburst99}) and use local radiative transfer based on the SP properties. Winds are also extracted directly from the SP and deposited locally. \\
     Supernovae & Supernovae energy of $e_{SN} = 10^{50}$ erg M$_{\odot}^{-1}$ is injected to neighboring cells using the Sedov-Taylor exact solution including mass, momentum and energy. & A voronoi-like mesh is constructed around the star particle, and energy, momentum, and mass are deposited in a weighted manner on the faces using the exact Sedov-Taylor solution \citep[see][]{hopkins_how_2017}.\\
-    Black Hole Growth & Uses a \citet{bondi__1957} solution such that $\dot{M}_{BH} \propto M_{BH}^2 \rho/(c^2 + u^2)^{3/2}$, and includes terms for black hole spin to cap accretion at the \citet{eddington__xxxx} limit. & Uses the \citet{hopkins_x_2011} `Torque' formalism such that $\dot{M}_{BH} \propto f_d^{3/2} M_d R_0^{-3/2} M_{BH}^{1/6}$. The \citet{eddington__xxxx} limit can be exceeded by 10 times in this model. \\
+        Black Hole Growth & Uses a \citet{bondi_spherically_1952} solution such that $\dot{M}_{BH} \propto M_{BH}^2 \rho/(c^2 + u^2)^{3/2}$, and includes terms for black hole spin to cap accretion at the Eddington limit (see §\ref{sec:bhs}). & Uses the \citet{hopkins_analytic_2011} `Torque' formalism such that $\dot{M}_{BH} \propto f_d^{3/2} M_d R_0^{-3/2} M_{BH}^{1/6}$. The Eddington limit can be exceeded by 10 times in this model (see §\ref{sec:bhs}). \\
     Black Hole Dynamics & A drag force is added to emulate dynamical friction. & The black hole is given a dynamical mass of $M_{dyn} = 60M_{BH}$ initially. This limit is removed once $M_{BH} = M_{dyn}$. \\
     AGN Feedback & Two modes: radio ($\dot{M}_{BH}/\dot{M}_{edd} < 0.01$) where jets are ejected at $v = 10^{4}$ km s$^{-1}$, and quasar, where energy is deposited isotropically to neighboring cells such that $\dot{E}_{AGN} \propto \dot{M}_{BH}$ is calibrated to reproduce the $M_{BH}$-$M_b$ and $M_{BH}$-$\sigma_b$ relations. & None. \\
-    Cooling & H, He and metals along with a UV background after reionization at $z=10$ is included in a \citet{sutherland_cooling_1993} model between $10^4$ and $10^{8.5}$ K. & A \citet{hopkins_x_2014} model is used with 11 species, self-shielding, and optically thick compoents between $10$ and $10^{10}$ K. 
+    Cooling & H, He and metals along with a UV background after reionization at $z=10$ is included in a \citet{sutherland_cooling_1993} model between $10^4$ and $10^{8.5}$ K. & A \citet{hopkins_galaxies_2014} model is used with 11 species, self-shielding, and optically thick components between $10$ and $10^{10}$ K. 
   \end{tabularx}
   \caption{A comparison of the various models used within both the \hagn{} and
     \fire{} simulation projects. Note that the black hole phyiscs considered in
     this table is \emph{only} presented in \citet{angles-alcazar_black_2017},
     and not in the main \fire{} paper \citep{hopkins_fire-2_2017} as the
     original set of \fire{} runs contains \emph{no black hole physics
-    whatsoever}.}
+    whatsoever}. Missing variable definitions can be found in the text.}
   \label{tab:comparison}
-\end{table}
-\begin{multicols}{2}
+\end{table*}
+\restoregeometry
+
+A quick comparison of relevant models used in \citet{dubois_black_2015}
+(the \hagn{} paper, henceforth referred to as D15) and
+\citet{angles-alcazar_black_2017} (the relevant \fire{} paper, henceforth
+referred to as A17) is presented in Table \ref{tab:comparison}. It is important
+to note that in the main \fire{} paper \citep{hopkins_fire-2_2017} and 
+calculations there is no black hole physics implemented; only in A17 are
+the effects of black holes considered.
+
+As well as the sub-grid physics models implemented in both of the simulation
+suites, there are some major differences in the algorithms chosen to calculate
+hydrodynamical and gravitational forces between two projects. Below these
+differences are considered individually.
+
+\subsection{Hydrodynamics}
+
+\hagn{} and \fire{} choose fundamentally different paradigms for their
+hydrodynamical calculations. \fire{} uses the `GIZMO' code in MFM mode
+(a meshless finite mass method, see \citet{hopkins_gizmo:_2015}), whereas
+\hagn{} uses the `RAMSES' code, using an AMR (adaptive mesh refinment, see
+\citet{teyssier_cosmological_2002}) technique. The difference between
+these two methods is that the MFM code uses \emph{particles} to represent
+the fluids in the simulations, and the AMR code uses \emph{cells} defined
+on a grid structure.
+
+The benefit to using a particle-based simulation code is that it is
+automatically adaptive; regions that are denser are inherrently better resolved
+as there is a higher density of particles (resolution elements). An AMR code,
+on the other hand, requires a refinment algorithm which refines the mesh
+typically when a cell breaches some density threshold. Historically, AMR codes
+have been prized for their more accurate (typically second-order)
+hydrodynamical calculations, but the GIZMO code takes advantage of a
+meshless structure (as opposed to the usual smoothed particle hydrodynamics
+used for particle-based simulations, see e.g.
+\citet{springel_cosmological_2005}) to solve equations to an equally high order
+when paired with an appropriate Riemann solver \citep{hopkins_gizmo:_2015,
+hopkins_new_2017}.
+
+Along with the underlying methods used to calculate hydrodynamical
+acclerations, there is also the question of resolution. In A17, particles of
+mass $m_b = 3.3\times10^4$ M$_\odot$ are used to represent the gas elements,
+leading to the galaxy disk being resolved by around $10^{7.5}$ elements. They
+also impose a minimal softening (force resolution) of $0.7$ pc. In contrast,
+the simulations in D15 have a much lower resolution; their minimum grid size
+is set to be $8.7$ pc; approximately ten times lower resolution than A17.
+Whilst it is impossible to directly compare the resolutions of these two
+simulations due to their different methodologies, an order of magnitude
+difference in force accuracy is still significant.
+
+\subsection{Gravity}
+
+The two simulation suites also differ in their gravity calculation algorithm.
+As with the hydrodynamics, the \hagn{} code uses an adaptive mesh to calculate
+gravitation forces (a `particle-mesh' method, based on
+\citet{kravtsov_adaptive_1997}). This has the advantage of calculating
+long-range gravitational forces very accurately, but under certain
+circumstances can cause errors in local force calculations. The \fire{} code
+uses the tree algorithm present in \citet{springel_cosmological_2005}, which
+trades off long-range accuracy for a more accurate local force calculation.
+With this said, it is unlikely that the details of the algorithm used to
+calculate the gravitational forces will have a marked effect on the results of
+a simulation; the resolution of these methods is considerably more important.
+Both of the simulation suites resolve their dark matter halos using a similar
+number of particles and to a similar force accuracy.
+
