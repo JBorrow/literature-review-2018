@@ -1,3 +1,73 @@
+A quick comparison of relevant models used in \citet{dubois_black_2015}
+(the \hagn{} paper, henceforth referred to as D15) and
+\citet{angles-alcazar_black_2017} (the relevant \fire{} paper, henceforth
+referred to as A17) is presented in Table \ref{tab:comparison}. It is important
+to note that in the main \fire{} paper \citep{hopkins_fire-2_2017} and 
+calculations there is no black hole physics implemented; only in A17 are
+the effects of black holes considered.
+
+Both A17 and D15 use the `zoom-in' technique; initially a large volume (in the
+case of A17 this is a cube of side length 50 Mpc/$h$) is simulated using a
+dark-matter only `N-body' code and a halo of Milky-Way mass at $z=0$ is
+selected. This is then re-simulated at high resolution with hydrodynamics
+`turned on' \citep[see][for details of the initial
+simulations]{kaviraj_horizon-agn_2017, wetzel_reconciling_2016}. 
+
+As well as the sub-grid physics models implemented in both of the simulation
+suites, there are some major differences in the algorithms chosen to calculate
+hydrodynamical and gravitational forces between two projects. Below these
+differences are considered individually.
+
+\subsection{Hydrodynamics}
+
+\hagn{} and \fire{} choose fundamentally different paradigms for their
+hydrodynamical calculations. \fire{} uses the `GIZMO' code in MFM mode \citep[a
+meshless finite mass method, see][]{hopkins_gizmo:_2015}, whereas \hagn{} uses
+the `RAMSES' code, using an AMR \citep[adaptive mesh refinment,
+see][]{teyssier_cosmological_2002} technique. The difference between these two
+methods is that the MFM code uses \emph{particles} to represent the fluids in
+the simulations, and the AMR code uses \emph{cells} defined on a grid
+structure.
+
+The benefit to using a particle-based simulation code is that it is
+automatically adaptive; regions that are denser are inherrently better resolved
+as there is a higher density of particles (resolution elements). An AMR code,
+on the other hand, requires a refinment algorithm which refines the mesh
+typically when a cell breaches some density threshold. Historically, AMR codes
+have been prized for their more accurate (typically second-order)
+hydrodynamical calculations, but the GIZMO code takes advantage of a meshless
+structure \citep[as opposed to the usual smoothed particle hydrodynamics used
+for particle-based simulations, see e.g.][]{springel_cosmological_2005} to
+solve equations to an equally high order when paired with an appropriate
+Riemann solver \citep{hopkins_gizmo:_2015, hopkins_new_2017}.
+
+Along with the underlying methods used to calculate hydrodynamical
+acclerations, there is also the question of resolution. In A17, particles of
+mass $m_b = 3.3\times10^4$ M$_\odot$ are used to represent the gas elements,
+leading to the galaxy disk being resolved by around $10^{7.5}$ elements. They
+also impose a minimal softening (force resolution) of $0.7$ pc. In contrast,
+the simulations in D15 have a much lower resolution; their minimum grid size is
+set to be $8.7$ pc; approximately ten times lower resolution than A17. Whilst
+it is impossible to directly compare the resolutions of these two simulations
+due to their different methodologies, an order of magnitude difference in force
+accuracy is still significant.
+
+\subsection{Gravity}
+
+The two simulation suites also differ in their gravity calculation algorithm.
+As with the hydrodynamics, the \hagn{} code uses an adaptive mesh to calculate
+gravitation forces \citep[a `particle-mesh' method, based
+on][]{kravtsov_adaptive_1997}. This has the advantage of calculating long-range
+gravitational forces very accurately, but under certain circumstances can cause
+errors in local force calculations. The \fire{} code uses the tree algorithm
+present in \citet{springel_cosmological_2005}, which trades off long-range
+accuracy for a more accurate local force calculation. With this said, it is
+unlikely that the details of the algorithm used to calculate the gravitational
+forces will have a marked effect on the results of a simulation; the resolution
+of these methods is considerably more important. Both of the simulation suites
+resolve their dark matter halos using a similar number of particles and to a
+similar force accuracy.
+
 % Change the distance between the lines to make it more readable
 \renewcommand{\arraystretch}{2}
 
@@ -24,68 +94,4 @@
   \label{tab:comparison}
 \end{table*}
 \restoregeometry
-
-A quick comparison of relevant models used in \citet{dubois_black_2015}
-(the \hagn{} paper, henceforth referred to as D15) and
-\citet{angles-alcazar_black_2017} (the relevant \fire{} paper, henceforth
-referred to as A17) is presented in Table \ref{tab:comparison}. It is important
-to note that in the main \fire{} paper \citep{hopkins_fire-2_2017} and 
-calculations there is no black hole physics implemented; only in A17 are
-the effects of black holes considered.
-
-As well as the sub-grid physics models implemented in both of the simulation
-suites, there are some major differences in the algorithms chosen to calculate
-hydrodynamical and gravitational forces between two projects. Below these
-differences are considered individually.
-
-\subsection{Hydrodynamics}
-
-\hagn{} and \fire{} choose fundamentally different paradigms for their
-hydrodynamical calculations. \fire{} uses the `GIZMO' code in MFM mode
-(a meshless finite mass method, see \citet{hopkins_gizmo:_2015}), whereas
-\hagn{} uses the `RAMSES' code, using an AMR (adaptive mesh refinment, see
-\citet{teyssier_cosmological_2002}) technique. The difference between
-these two methods is that the MFM code uses \emph{particles} to represent
-the fluids in the simulations, and the AMR code uses \emph{cells} defined
-on a grid structure.
-
-The benefit to using a particle-based simulation code is that it is
-automatically adaptive; regions that are denser are inherrently better resolved
-as there is a higher density of particles (resolution elements). An AMR code,
-on the other hand, requires a refinment algorithm which refines the mesh
-typically when a cell breaches some density threshold. Historically, AMR codes
-have been prized for their more accurate (typically second-order)
-hydrodynamical calculations, but the GIZMO code takes advantage of a
-meshless structure (as opposed to the usual smoothed particle hydrodynamics
-used for particle-based simulations, see e.g.
-\citet{springel_cosmological_2005}) to solve equations to an equally high order
-when paired with an appropriate Riemann solver \citep{hopkins_gizmo:_2015,
-hopkins_new_2017}.
-
-Along with the underlying methods used to calculate hydrodynamical
-acclerations, there is also the question of resolution. In A17, particles of
-mass $m_b = 3.3\times10^4$ M$_\odot$ are used to represent the gas elements,
-leading to the galaxy disk being resolved by around $10^{7.5}$ elements. They
-also impose a minimal softening (force resolution) of $0.7$ pc. In contrast,
-the simulations in D15 have a much lower resolution; their minimum grid size
-is set to be $8.7$ pc; approximately ten times lower resolution than A17.
-Whilst it is impossible to directly compare the resolutions of these two
-simulations due to their different methodologies, an order of magnitude
-difference in force accuracy is still significant.
-
-\subsection{Gravity}
-
-The two simulation suites also differ in their gravity calculation algorithm.
-As with the hydrodynamics, the \hagn{} code uses an adaptive mesh to calculate
-gravitation forces (a `particle-mesh' method, based on
-\citet{kravtsov_adaptive_1997}). This has the advantage of calculating
-long-range gravitational forces very accurately, but under certain
-circumstances can cause errors in local force calculations. The \fire{} code
-uses the tree algorithm present in \citet{springel_cosmological_2005}, which
-trades off long-range accuracy for a more accurate local force calculation.
-With this said, it is unlikely that the details of the algorithm used to
-calculate the gravitational forces will have a marked effect on the results of
-a simulation; the resolution of these methods is considerably more important.
-Both of the simulation suites resolve their dark matter halos using a similar
-number of particles and to a similar force accuracy.
 
