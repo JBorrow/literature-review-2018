@@ -1,0 +1,358 @@
+\begin{thebibliography}{30}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Smith et~al.(2017)Smith, Cole, Baugh, Zheng, Angulo, Norberg, and
+  Zehavi]{smith_lightcone_2017}
+Alex Smith, Shaun Cole, Carlton Baugh, Zheng Zheng, Raúl Angulo, Peder
+  Norberg, and Idit Zehavi.
+\newblock A lightcone catalogue from the {Millennium}-{XXL} simulation.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  470\penalty0 (4):\penalty0 4646, October 2017.
+\newblock \doi{10.1093/mnras/stx1432}.
+\newblock URL
+  \url{https://ui.adsabs.harvard.edu/#abs/2017MNRAS.470.4646S/abstract}.
+
+\bibitem[Arnold et~al.(2016)Arnold, Springel, and Puchwein]{arnold_zoomed_2016}
+Christian Arnold, Volker Springel, and Ewald Puchwein.
+\newblock Zoomed cosmological simulations of {Milky} {Way}-sized haloes in
+  f({R}) gravity.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  462\penalty0 (2):\penalty0 1530, October 2016.
+\newblock \doi{10.1093/mnras/stw1708}.
+\newblock URL
+  \url{https://ui.adsabs.harvard.edu/#abs/2016MNRAS.462.1530A/abstract}.
+
+\bibitem[Schaye et~al.(2015)Schaye, Crain, Bower, Furlong, Schaller, Theuns,
+  Dalla~Vecchia, Frenk, McCarthy, Helly, Jenkins, Rosas-Guevara, White, Baes,
+  Booth, Camps, Navarro, Qu, Rahmati, Sawala, Thomas, and
+  Trayford]{schaye_eagle_2015}
+Joop Schaye, Robert~A. Crain, Richard~G. Bower, Michelle Furlong, Matthieu
+  Schaller, Tom Theuns, Claudio Dalla~Vecchia, Carlos~S. Frenk, I.~G. McCarthy,
+  John~C. Helly, Adrian Jenkins, Y.~M. Rosas-Guevara, Simon D.~M. White,
+  Maarten Baes, C.~M. Booth, Peter Camps, Julio~F. Navarro, Yan Qu, Alireza
+  Rahmati, Till Sawala, Peter~A. Thomas, and James Trayford.
+\newblock The {EAGLE} project: simulating the evolution and assembly of
+  galaxies and their environments.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  446\penalty0 (1):\penalty0 521--554, January 2015.
+\newblock ISSN 0035-8711.
+\newblock \doi{10.1093/mnras/stu2058}.
+\newblock URL
+  \url{https://academic.oup.com/mnras/article/446/1/521/1316115/The-EAGLE-project-simulating-the-evolution-and}.
+
+\bibitem[Lemson and Virgo~Consortium(2006)]{lemson_halo_2006}
+G.~Lemson and The Virgo~Consortium.
+\newblock Halo and {Galaxy} {Formation} {Histories} from the {Millennium}
+  {Simulation}: {Public} release of a {VO}-oriented and {SQL}-queryable
+  database for studying the evolution of galaxies in the {LambdaCDM} cosmogony.
+\newblock \emph{ArXiv e-prints}, pages astro--ph/0608019, August 2006.
+\newblock URL
+  \url{https://ui.adsabs.harvard.edu/#abs/2006astro.ph..8019L/abstract}.
+
+\bibitem[Lacey et~al.(2016)Lacey, Baugh, Frenk, Benson, Bower, Cole,
+  Gonzalez-Perez, Helly, Lagos, and Mitchell]{lacey_unified_2016}
+Cedric~G. Lacey, Carlton~M. Baugh, Carlos~S. Frenk, Andrew~J. Benson,
+  Richard~G. Bower, Shaun Cole, Violeta Gonzalez-Perez, John~C. Helly, Claudia
+  D.~P. Lagos, and Peter~D. Mitchell.
+\newblock A unified multiwavelength model of galaxy formation.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  462\penalty0 (4):\penalty0 3854, November 2016.
+\newblock \doi{10.1093/mnras/stw1888}.
+\newblock URL
+  \url{https://ui.adsabs.harvard.edu/#abs/2016MNRAS.462.3854L/abstract}.
+
+\bibitem[Vogelsberger et~al.(2014)Vogelsberger, Genel, Springel, Torrey,
+  Sijacki, Xu, Snyder, Nelson, and Hernquist]{vogelsberger_introducing_2014}
+Mark Vogelsberger, Shy Genel, Volker Springel, Paul Torrey, Debora Sijacki,
+  Dandan Xu, Gregory~F. Snyder, Dylan Nelson, and Lars Hernquist.
+\newblock Introducing the {Illustris} {Project}: {Simulating} the coevolution
+  of dark and visible matter in the {Universe}.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  444\penalty0 (2):\penalty0 1518--1547, August 2014.
+\newblock ISSN 0035-8711, 1365-2966.
+\newblock \doi{10.1093/mnras/stu1536}.
+\newblock URL \url{http://arxiv.org/abs/1405.2921}.
+\newblock arXiv: 1405.2921.
+
+\bibitem[Pillepich et~al.(2018)Pillepich, Springel, Nelson, Genel, Naiman,
+  Pakmor, Hernquist, Torrey, Vogelsberger, Weinberger, and
+  Marinacci]{pillepich_simulating_2018}
+Annalisa Pillepich, Volker Springel, Dylan Nelson, Shy Genel, Jill Naiman,
+  Rüdiger Pakmor, Lars Hernquist, Paul Torrey, Mark Vogelsberger, Rainer
+  Weinberger, and Federico Marinacci.
+\newblock Simulating galaxy formation with the {IllustrisTNG} model.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  473:\penalty0 4077--4106, January 2018.
+\newblock ISSN 0035-8711.
+\newblock \doi{10.1093/mnras/stx2656}.
+\newblock URL \url{http://adsabs.harvard.edu/abs/2018MNRAS.473.4077P}.
+
+\bibitem[Dubois et~al.(2014)Dubois, Pichon, Welker, Le~Borgne, Devriendt,
+  Laigle, Codis, Pogosyan, Arnouts, Benabed, Bertin, Blaizot, Bouchet, Cardoso,
+  Colombi, de~Lapparent, Desjacques, Gavazzi, Kassin, Kimm, McCracken,
+  Milliard, Peirani, Prunet, Rouberol, Silk, Slyz, Sousbie, Teyssier, Tresse,
+  Treyer, Vibert, and Volonteri]{dubois_dancing_2014}
+Y.~Dubois, C.~Pichon, C.~Welker, D.~Le~Borgne, J.~Devriendt, C.~Laigle,
+  S.~Codis, D.~Pogosyan, S.~Arnouts, K.~Benabed, E.~Bertin, J.~Blaizot,
+  F.~Bouchet, J.-F. Cardoso, S.~Colombi, V.~de~Lapparent, V.~Desjacques,
+  R.~Gavazzi, S.~Kassin, T.~Kimm, H.~McCracken, B.~Milliard, S.~Peirani,
+  S.~Prunet, S.~Rouberol, J.~Silk, A.~Slyz, T.~Sousbie, R.~Teyssier, L.~Tresse,
+  M.~Treyer, D.~Vibert, and M.~Volonteri.
+\newblock Dancing in the dark: galactic properties trace spin swings along the
+  cosmic web.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  444\penalty0 (2):\penalty0 1453, October 2014.
+\newblock \doi{10.1093/mnras/stu1227}.
+\newblock URL
+  \url{https://ui.adsabs.harvard.edu/#abs/2014MNRAS.444.1453D/abstract}.
+
+\bibitem[Hopkins et~al.(2017{\natexlab{a}})Hopkins, Wetzel, Keres,
+  Faucher-Giguere, Quataert, Boylan-Kolchin, Murray, Hayward, Garrison-Kimmel,
+  Hummels, Feldmann, Torrey, Ma, Angles-Alcazar, Su, Orr, Schmitz, Escala,
+  Sanderson, Grudic, Hafen, Kim, Fitts, Bullock, Wheeler, Chan, Elbert, and
+  Narananan]{hopkins_fire-2_2017}
+Philip~F. Hopkins, Andrew Wetzel, Dusan Keres, Claude-Andre Faucher-Giguere,
+  Eliot Quataert, Michael Boylan-Kolchin, Norman Murray, Christopher~C.
+  Hayward, Shea Garrison-Kimmel, Cameron Hummels, Robert Feldmann, Paul Torrey,
+  Xiangcheng Ma, Daniel Angles-Alcazar, Kung-Yi Su, Matthew Orr, Denise
+  Schmitz, Ivanna Escala, Robyn Sanderson, Michael~Y. Grudic, Zachary Hafen,
+  Ji-Hoon Kim, Alex Fitts, James~S. Bullock, Coral Wheeler, T.~K. Chan,
+  Oliver~D. Elbert, and Desika Narananan.
+\newblock {FIRE}-2 {Simulations}: {Physics} versus {Numerics} in {Galaxy}
+  {Formation}.
+\newblock \emph{arXiv:1702.06148 [astro-ph]}, February 2017{\natexlab{a}}.
+\newblock URL \url{http://arxiv.org/abs/1702.06148}.
+\newblock arXiv: 1702.06148.
+
+\bibitem[Dubois et~al.(2015)Dubois, Volonteri, Silk, Devriendt, Slyz, and
+  Teyssier]{dubois_black_2015}
+Yohan Dubois, Marta Volonteri, Joseph Silk, Julien Devriendt, Adrianne Slyz,
+  and Romain Teyssier.
+\newblock Black hole evolution: {I}. {Supernova}-regulated black hole growth.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  452\penalty0 (2):\penalty0 1502--1518, September 2015.
+\newblock ISSN 0035-8711, 1365-2966.
+\newblock \doi{10.1093/mnras/stv1416}.
+\newblock URL \url{http://arxiv.org/abs/1504.00018}.
+\newblock arXiv: 1504.00018.
+
+\bibitem[Anglés-Alcázar et~al.(2017)Anglés-Alcázar, Faucher-Giguère,
+  Quataert, Hopkins, Feldmann, Torrey, Wetzel, and
+  Kereš]{angles-alcazar_black_2017}
+Daniel Anglés-Alcázar, Claude-André Faucher-Giguère, Eliot Quataert,
+  Philip~F. Hopkins, Robert Feldmann, Paul Torrey, Andrew Wetzel, and Dušan
+  Kereš.
+\newblock Black holes on {FIRE}: stellar feedback limits early feeding of
+  galactic nuclei.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  472\penalty0 (1):\penalty0 L109, November 2017.
+\newblock \doi{10.1093/mnrasl/slx161}.
+\newblock URL
+  \url{https://ui.adsabs.harvard.edu/#abs/2017MNRAS.472L.109A/abstract}.
+
+\bibitem[Kaviraj et~al.(2017)Kaviraj, Laigle, Kimm, Devriendt, Dubois, Pichon,
+  Slyz, Chisari, and Peirani]{kaviraj_horizon-agn_2017}
+S.~Kaviraj, C.~Laigle, T.~Kimm, J.~E.~G. Devriendt, Y.~Dubois, C.~Pichon,
+  A.~Slyz, E.~Chisari, and S.~Peirani.
+\newblock The {Horizon}-{AGN} simulation: evolution of galaxy properties over
+  cosmic time.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society}, page
+  stx126, January 2017.
+\newblock ISSN 0035-8711, 1365-2966.
+\newblock \doi{10.1093/mnras/stx126}.
+\newblock URL \url{http://arxiv.org/abs/1605.09379}.
+\newblock arXiv: 1605.09379.
+
+\bibitem[Wetzel et~al.(2016)Wetzel, Hopkins, Kim, Faucher-Giguere, Keres, and
+  Quataert]{wetzel_reconciling_2016}
+Andrew~R. Wetzel, Philip~F. Hopkins, Ji-hoon Kim, Claude-Andre Faucher-Giguere,
+  Dusan Keres, and Eliot Quataert.
+\newblock Reconciling dwarf galaxies with {LCDM} cosmology: {Simulating} a
+  realistic population of satellites around a {Milky} {Way}-mass galaxy.
+\newblock \emph{The Astrophysical Journal}, 827\penalty0 (2):\penalty0 L23,
+  August 2016.
+\newblock ISSN 2041-8213.
+\newblock \doi{10.3847/2041-8205/827/2/L23}.
+\newblock URL \url{http://arxiv.org/abs/1602.05957}.
+\newblock arXiv: 1602.05957.
+
+\bibitem[Hopkins(2015)]{hopkins_gizmo:_2015}
+Philip~F. Hopkins.
+\newblock {GIZMO}: {A} {New} {Class} of {Accurate}, {Mesh}-{Free}
+  {Hydrodynamic} {Simulation} {Methods}.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  450\penalty0 (1):\penalty0 53--110, June 2015.
+\newblock ISSN 0035-8711, 1365-2966.
+\newblock \doi{10.1093/mnras/stv195}.
+\newblock URL \url{http://arxiv.org/abs/1409.7395}.
+\newblock arXiv: 1409.7395.
+
+\bibitem[Teyssier(2002)]{teyssier_cosmological_2002}
+Romain Teyssier.
+\newblock Cosmological {Hydrodynamics} with {Adaptive} {Mesh} {Refinement}: a
+  new high resolution code called {RAMSES}.
+\newblock \emph{Astronomy \& Astrophysics}, 385\penalty0 (1):\penalty0
+  337--364, April 2002.
+\newblock ISSN 0004-6361, 1432-0746.
+\newblock \doi{10.1051/0004-6361:20011817}.
+\newblock URL \url{http://arxiv.org/abs/astro-ph/0111367}.
+\newblock arXiv: astro-ph/0111367.
+
+\bibitem[Springel(2005)]{springel_cosmological_2005}
+Volker Springel.
+\newblock The cosmological simulation code {GADGET}-2.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  364\penalty0 (4):\penalty0 1105--1134, December 2005.
+\newblock ISSN 0035-8711, 1365-2966.
+\newblock \doi{10.1111/j.1365-2966.2005.09655.x}.
+\newblock URL \url{http://arxiv.org/abs/astro-ph/0505010}.
+\newblock arXiv: astro-ph/0505010.
+
+\bibitem[Hopkins(2017)]{hopkins_new_2017}
+Philip~F. Hopkins.
+\newblock A {New} {Public} {Release} of the {GIZMO} {Code}.
+\newblock \emph{ArXiv e-prints}, page arXiv:1712.01294, December 2017.
+\newblock URL
+  \url{https://ui.adsabs.harvard.edu/#abs/2017arXiv171201294H/abstract}.
+
+\bibitem[Kravtsov et~al.(1997)Kravtsov, Klypin, and
+  Khokhlov]{kravtsov_adaptive_1997}
+Andrey~V. Kravtsov, Anatoly~A. Klypin, and Alexei~M. Khokhlov.
+\newblock Adaptive {Refinement} {Tree}: {A} {New} {High}-{Resolution}
+  {N}-{Body} {Code} for {Cosmological} {Simulations}.
+\newblock \emph{The Astrophysical Journal Supplement Series}, 111\penalty0
+  (1):\penalty0 73, 1997.
+\newblock ISSN 0067-0049.
+\newblock \doi{10.1086/313015}.
+\newblock URL \url{http://stacks.iop.org/0067-0049/111/i=1/a=73}.
+
+\bibitem[Kennicutt(1989)]{kennicutt_star_1989}
+Robert~C. Kennicutt.
+\newblock The {Star} {Formation} {Law} in {Galactic} {Disks}.
+\newblock \emph{The Astrophysical Journal}, 344, September 1989.
+\newblock \doi{10.1086/167834}.
+\newblock URL
+  \url{https://ui.adsabs.harvard.edu/#abs/1989ApJ...344..685K/abstract}.
+
+\bibitem[Jeans(1902)]{jeans_stability_1902}
+J.~H. Jeans.
+\newblock The {Stability} of a {Spherical} {Nebula}.
+\newblock \emph{Philosophical Transactions of the Royal Society of London A:
+  Mathematical, Physical and Engineering Sciences}, 199\penalty0
+  (312-320):\penalty0 1--53, January 1902.
+\newblock ISSN 1364-503X, 1471-2962.
+\newblock \doi{10.1098/rsta.1902.0012}.
+\newblock URL
+  \url{http://rsta.royalsocietypublishing.org/content/199/312-320/1}.
+
+\bibitem[Dubois and Teyssier(2008)]{dubois_onset_2008}
+Yohan Dubois and Romain Teyssier.
+\newblock On the onset of galactic winds in quiescent star forming galaxies.
+\newblock \emph{Astronomy \& Astrophysics}, 477\penalty0 (1):\penalty0 79--94,
+  January 2008.
+\newblock ISSN 0004-6361, 1432-0746.
+\newblock \doi{10.1051/0004-6361:20078326}.
+\newblock URL \url{http://arxiv.org/abs/0707.3376}.
+\newblock arXiv: 0707.3376.
+
+\bibitem[Hopkins et~al.(2017{\natexlab{b}})Hopkins, Wetzel, Keres,
+  Faucher-Giguere, Quataert, Boylan-Kolchin, Murray, Hayward, and
+  El-Badry]{hopkins_how_2017}
+Philip~F. Hopkins, Andrew Wetzel, Dusan Keres, Claude-Andre Faucher-Giguere,
+  Eliot Quataert, Michael Boylan-Kolchin, Norman Murray, Christopher~C.
+  Hayward, and Kareem El-Badry.
+\newblock How {To} {Model} {Supernovae} in {Simulations} of {Star} and {Galaxy}
+  {Formation}.
+\newblock \emph{ArXiv e-prints}, page arXiv:1707.07010, July
+  2017{\natexlab{b}}.
+\newblock URL
+  \url{https://ui.adsabs.harvard.edu/#abs/2017arXiv170707010H/abstract}.
+
+\bibitem[Bondi(1952)]{bondi_spherically_1952}
+H.~Bondi.
+\newblock On spherically symmetrical accretion.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  112:\penalty0 195, 1952.
+\newblock \doi{10.1093/mnras/112.2.195}.
+\newblock URL
+  \url{https://ui.adsabs.harvard.edu/#abs/1952MNRAS.112..195B/abstract}.
+
+\bibitem[Hopkins and Quataert(2011)]{hopkins_analytic_2011}
+Philip~F. Hopkins and Eliot Quataert.
+\newblock An analytic model of angular momentum transport by gravitational
+  torques: from galaxies to massive black holes.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  415\penalty0 (2):\penalty0 1027, August 2011.
+\newblock \doi{10.1111/j.1365-2966.2011.18542.x}.
+\newblock URL
+  \url{https://ui.adsabs.harvard.edu/#abs/2011MNRAS.415.1027H/abstract}.
+
+\bibitem[Sutherland and Dopita(1993)]{sutherland_cooling_1993}
+Ralph~S. Sutherland and M.~A. Dopita.
+\newblock Cooling functions for low-density astrophysical plasmas.
+\newblock \emph{The Astrophysical Journal Supplement Series}, 88:\penalty0
+  253--327, September 1993.
+\newblock ISSN 0067-0049.
+\newblock \doi{10.1086/191823}.
+\newblock URL \url{http://adsabs.harvard.edu/abs/1993ApJS...88..253S}.
+
+\bibitem[Hopkins et~al.(2014)Hopkins, Kereš, Oñorbe, Faucher-Giguère,
+  Quataert, Murray, and Bullock]{hopkins_galaxies_2014}
+Philip~F. Hopkins, Dušan Kereš, José Oñorbe, Claude-André
+  Faucher-Giguère, Eliot Quataert, Norman Murray, and James~S. Bullock.
+\newblock Galaxies on {FIRE} ({Feedback} {In} {Realistic} {Environments}):
+  stellar feedback explains cosmologically inefficient star formation.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  445\penalty0 (1):\penalty0 581, November 2014.
+\newblock \doi{10.1093/mnras/stu1738}.
+\newblock URL
+  \url{https://ui.adsabs.harvard.edu/#abs/2014MNRAS.445..581H/abstract}.
+
+\bibitem[Greene et~al.(2010)Greene, Peng, Kim, Kuo, Braatz, Impellizzeri,
+  Condon, Lo, Henkel, and Reid]{greene_precise_2010}
+Jenny~E. Greene, Chien~Y. Peng, Minjin Kim, Cheng-Yu Kuo, James~A. Braatz,
+  C.~M.~V. Impellizzeri, James~J. Condon, K.~Y. Lo, Christian Henkel, and
+  Mark~J. Reid.
+\newblock Precise {Black} {Hole} {Masses} from {Megamaser} {Disks}: {Black}
+  {Hole}-{Bulge} {Relations} at {Low} {Mass}.
+\newblock \emph{The Astrophysical Journal}, 721\penalty0 (1):\penalty0 26,
+  September 2010.
+\newblock \doi{10.1088/0004-637X/721/1/26}.
+\newblock URL
+  \url{https://ui.adsabs.harvard.edu/#abs/2010ApJ...721...26G/abstract}.
+
+\bibitem[Graham and Scott(2015)]{graham_black_2015}
+Alister~W. Graham and Nicholas Scott.
+\newblock The ({Black} {Hole})-bulge {Mass} {Scaling} {Relation} at {Low}
+  {Masses}.
+\newblock \emph{The Astrophysical Journal}, 798\penalty0 (1):\penalty0 54,
+  January 2015.
+\newblock \doi{10.1088/0004-637X/798/1/54}.
+\newblock URL
+  \url{https://ui.adsabs.harvard.edu/#abs/2015ApJ...798...54G/abstract}.
+
+\bibitem[Häring and Rix(2004)]{haring_black_2004}
+Nadine Häring and Hans-Walter Rix.
+\newblock On the {Black} {Hole} {Mass}-{Bulge} {Mass} {Relation}.
+\newblock \emph{The Astrophysical Journal Letters}, 604:\penalty0 L89--L92,
+  April 2004.
+\newblock ISSN 0004-637X.
+\newblock \doi{10.1086/383567}.
+\newblock URL \url{http://adsabs.harvard.edu/abs/2004ApJ...604L..89H}.
+
+\bibitem[Bower et~al.(2006)Bower, Benson, Malbon, Helly, Frenk, Baugh, Cole,
+  and Lacey]{bower_breaking_2006}
+R.~G. Bower, A.~J. Benson, R.~Malbon, J.~C. Helly, C.~S. Frenk, C.~M. Baugh,
+  S.~Cole, and C.~G. Lacey.
+\newblock Breaking the hierarchy of galaxy formation.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  370:\penalty0 645--655, August 2006.
+\newblock ISSN 0035-8711.
+\newblock \doi{10.1111/j.1365-2966.2006.10519.x}.
+\newblock URL \url{http://adsabs.harvard.edu/abs/2006MNRAS.370..645B}.
+
+\end{thebibliography}

@@ -47,10 +47,14 @@ mass $m_b = 3.3\times10^4$ M$_\odot$ are used to represent the gas elements,
 leading to the galaxy disk being resolved by around $10^{7.5}$ elements. They
 also impose a minimal softening (force resolution) of $0.7$ pc. In contrast,
 the simulations in D15 have a much lower resolution; their minimum grid size is
-set to be $8.7$ pc; approximately ten times lower resolution than A17. Whilst
-it is impossible to directly compare the resolutions of these two simulations
-due to their different methodologies, an order of magnitude difference in force
-accuracy is still significant.
+set to be $8.7$ pc; approximately ten times lower resolution than A17. The grid
+is refined when there are more than 8 dark matter particles within a given cell
+or a cell has a density 8 times greater than the intial dark matter density.
+It is worth noting that these two numbers are not directly comparable; the 
+chosen softening length does not necessarily correspond to a specific
+`resolution scale'. Both simulation suites use dark matter particles to resolve
+their halos within a factor of two of each other, suggesting the true
+`resolution' of both of the suites is comparable.
 
 \subsection{Gravity}
 
@@ -77,9 +81,9 @@ similar force accuracy.
     \begin{tabularx}{\textwidth}{cXX}
     Model & \hagn & \fire \\
     \hline
-        Star Formation & Schmidt Law: $\dot{\rho}_* = \epsilon_* \rho / t_{\rm ff}$ at high densities ($\rho_0 > 250$ $n_H$ cm$^{-3}$), where $\dot{\rho}_*$ is the local star formation rate, $\epsilon_*$ is an efficiency factor, $\rho$ is the local gas density, and $t_{\rm ff}$ is the free-fall time. Resolution dependent. & Contains resolved molecular clouds. Star formation (SF) is activated when gas is self-gravitating, self-shielded, and has a density $\rho_0 > 1000$ $n_H$ cm$^{-3}$. SF in these regions follows a Schmidt Law: $\dot{\rho}_* = \rho_{mol} / t_{\rm ff}$ where $\rho_{mol}$ is the density of molecular gas. \\
-        Stellar Feedback & Gas pressure is enhanced to follow $T = T_0 (\rho/\rho_0)$ in the cells surrounding the SF event. & Stellar populations (SP) are individually evolved (using \textsc{Starburst99}) and use local radiative transfer based on the SP properties. Winds are also extracted directly from the SP and deposited locally. \\
-    Supernovae & Supernovae energy of $e_{SN} = 10^{50}$ erg M$_{\odot}^{-1}$ is injected to neighboring cells using the Sedov-Taylor exact solution including mass, momentum and energy. & A voronoi-like mesh is constructed around the star particle, and energy, momentum, and mass are deposited in a weighted manner on the faces using the exact Sedov-Taylor solution \citep[see][]{hopkins_how_2017}.\\
+        Star Formation & Schmidt Law \citep{kennicutt_star_1989}: $\dot{\rho}_* = \epsilon_* \rho / t_{\rm ff} \propto \rho^{3/2}$ at high densities ($\rho_0 > 250$ $n_H$ cm$^{-3}$), where $\dot{\rho}_*$ is the local star formation rate, $\epsilon_*$ is an efficiency factor, $\rho$ is the local gas density, and $t_{\rm ff}$ is the free-fall time. Resolution dependent. & Contains resolved molecular clouds. Star formation (SF) is activated when gas is self-gravitating, self-shielded, and has a density $\rho_0 > 1000$ $n_H$ cm$^{-3}$. SF in these regions follows a Schmidt Law: $\dot{\rho}_* = \rho_{mol} / t_{\rm ff}$ where $\rho_{mol}$ is the density of molecular gas. \\
+        Stellar Feedback & Gas pressure is enhanced to follow $T = T_0 (\rho/\rho_0)$ in the cells surrounding the SF event to ensure a well-resolved \citet{jeans_stability_1902} length within four cells. & Stellar populations (SP) are individually evolved (using \textsc{Starburst99}) and use local radiative transfer (sing a Sobolev approximation to estimate the column integrated to infinity) based on the SP properties. Winds are also extracted directly from the SP and deposited locally. \\
+        Supernovae & Supernovae energy of $e_{SN} = 10^{50}$ erg M$_{\odot}^{-1}$ is injected to neighboring cells (up to $30^3$ cells) using the Sedov-Taylor exact solution including mass, momentum and energy \citep[see][for more details]{dubois_onset_2008}.& A voronoi-like mesh is constructed around the star particle, and energy, momentum, and mass are deposited in a weighted manner on the faces using the exact Sedov-Taylor solution \citep[see][]{hopkins_how_2017}.\\
         Black Hole Growth & Uses a \citet{bondi_spherically_1952} solution such that $\dot{M}_{BH} \propto M_{BH}^2 \rho/(c^2 + u^2)^{3/2}$, and includes terms for black hole spin to cap accretion at the Eddington limit (see §\ref{sec:bhs}). & Uses the \citet{hopkins_analytic_2011} `Torque' formalism such that $\dot{M}_{BH} \propto f_d^{3/2} M_d R_0^{-3/2} M_{BH}^{1/6}$. The Eddington limit can be exceeded by 10 times in this model (see §\ref{sec:bhs}). \\
     Black Hole Dynamics & A drag force is added to emulate dynamical friction. & The black hole is given a dynamical mass of $M_{dyn} = 60M_{BH}$ initially. This limit is removed once $M_{BH} = M_{dyn}$. \\
     AGN Feedback & Two modes: radio ($\dot{M}_{BH}/\dot{M}_{edd} < 0.01$) where jets are ejected at $v = 10^{4}$ km s$^{-1}$, and quasar, where energy is deposited isotropically to neighboring cells such that $\dot{E}_{AGN} \propto \dot{M}_{BH}$ is calibrated to reproduce the $M_{BH}$-$M_b$ and $M_{BH}$-$\sigma_b$ relations. & None. \\

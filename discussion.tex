@@ -4,10 +4,19 @@ that were extracted from cosmological simulations. A17 and D15 also use
 black hole accretion rates that scale differently with local density, black
 hole mass, and other properties; despite this the accretion histories for
 black holes in both the \fire{} and \hagn{} simulations follow very similar
-patterns. This, along with other evidence that there is not space to discuss,
+patterns, along with the observational evidence backing up their claims.
+This, along with other evidence that there is not space to discuss,
 lead both papers to the conclusion that efficient stellar and supernovae
 feedback quench the black holes until some critical density threshold is
-reached.
+reached. Below the characteristic mass scale of a few $10^9$ to $10^{10}$
+M$_\odot$, the bulge does not have enough mass to effectively cool gas rapidly
+enough before it is destroyed by star formation and supernovae events to
+feed the black hole.
+
+Both papers include the use of similar sub-grid physics specifications, even if
+they are not always consistent on the details (see Table \ref{tab:comparison}).
+They both include star formation, stellar feedback, supernovae, black holes
+and their dynamics, and a complex gas cooling prescription.
 
 It is concerning that in none of the original simulation suite of 40 zoom-in
 simulations from the \fire{} project there is no implementation of black holes;
@@ -28,3 +37,4 @@ stellar feedback (by running with and without stellar feedback `turned on')
 however this could equally be due to some particular property of the initial
 conditions considered. The fact that both papers come to the same conclusion is
 promising, but a more statistically motivated study would have more merit.
+
